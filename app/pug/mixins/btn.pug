@@ -1,0 +1,25 @@
+mixin btn(data)
+    - modsList = ''
+    if(typeof data.mod == 'object')
+        each mod in data.mod
+            - modsList += ' ' + '__' + mod
+    if(typeof data.mod == 'string')
+        - modsList += ' ' + '__' + data.mod
+
+    if(data.tag === 'a' && data.href)
+        - var href = {'href': data.href}
+    else
+        - var href = ''
+
+    a(class='btn' + modsList)&attributes(href)&attributes(attributes)
+        = data.text
+        block
+
+//- example
+//- +btn({
+//-     tag: 'a',
+//-     href: '#',
+//-     mod: '',
+//-     text: 'button'
+//- })(class='someclass', type='button')
+//- also text in block

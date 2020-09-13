@@ -1,0 +1,27 @@
+mixin client(logo)
+    .our-clients_item
+        span= logo
+
+.our-clients
+    .l-wrapper.our-clients_inner
+        .our-clients_header
+            .our-clients_title.
+                Our Beloved Client
+            .our-clients_text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                enim ad minim veniam.
+
+        .our-clients_items
+            .our-clients_items-row
+                +client('logo client 1')
+                +client('logo client 2')
+                +client('logo client 3')
+                +client('logo client 4')
+            .our-clients_items-row
+                +client('logo client 5')
+                +client('logo client 6')
+                +client('logo client 7')
+                .our-clients_item
+                    a(href="#").our-clients_more More Client
+                

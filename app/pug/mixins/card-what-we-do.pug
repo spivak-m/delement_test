@@ -1,0 +1,9 @@
+mixin card-what-we-do(title, img)
+    .card-what-we-do
+        .card-what-we-do_img
+            img(src= img, alt="")
+        .card-what-we-do_title= title
+        .card-what-we-do_text
+            if block
+                block
+        a(href="#").card-what-we-do_more Learn more
