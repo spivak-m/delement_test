@@ -1,11 +1,48 @@
 .site-header
     width: 100%
 
-    outline: 1px solid red
+    &.__full
+        background: linear-gradient(0deg, rgba(152, 195, 232, .2) 8.84%, rgba(152, 195, 232, 0) 31.12%),
+        url('../img/illustration.png') 910px 100px no-repeat
+        // opacity: 0.2
 
 .site-header_nav
     display: flex
+    align-items: center
     width: 100%
+    padding: 40px 0
 
 .site-header_logo
+    width: 48px
     margin-right: auto
+    text-decoration: none
+    line-height: 0
+
+.site-header_menu
+    color: #356EAD
+    text-decoration: none
+
+.site-header_banner
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    padding: 70px 100px 190px 130px
+
+.site-header_banner-title
+    max-width: 520px
+    margin: 0 0 30px 0
+    vertical-align: top
+    font-family: "Galien", serif
+    font-size: 64px
+    font-weight: 700
+    color: #1f3f68
+    line-height: 1.156
+    letter-spacing: .04em
+
+.site-header_banner-text
+    max-width: 430px
+    padding: 0
+    margin: 0 0 70px 0
+    letter-spacing: .05em
+    color: #1F3F68
+    opacity: 0.6

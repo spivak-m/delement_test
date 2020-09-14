@@ -1,6 +1,18 @@
 extends base
+include ../components/site-header
+include ../components/site-footer
 
 block body
-    include ../components/site-header-full
+    +site-header().__full
+        .site-header_banner.l-wrapper
+            b.site-header_banner-title.
+                New Automation
+                Tool for Your Home
+            p.site-header_banner-text.
+                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                elit. Faucibus tristique vulputate ultrices ut mauris 
+                tellus at. Posuere sollicitudin odio tellus elit.
+            a(href="#").btn See Our Project
+
     block content
-    include ../components/site-footer
+    +site-footer.__index

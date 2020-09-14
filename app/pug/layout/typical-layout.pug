@@ -1,6 +1,8 @@
 extends base
+include ../components/site-header
+include ../components/site-footer
 
 block body
-    include ../components/site-header
+    +site-header()
     block content
-    include ../components/site-footer
+    +site-footer()

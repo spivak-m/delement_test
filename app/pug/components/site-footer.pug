@@ -1,54 +1,63 @@
 include ../mixins/btn
+include ../mixins/site-logo
 
-.site-footer
-    .site-footer_top
-        .contact-us
-            .contact-us_title.
-                Intersted to woek with our team?
-            .contact-us_text.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore 
-                magna aliqua. Ut enim ad minim veniam.
-            +btn({
-                tag: 'a',
-                href: '#',
-                mod: '',
-                text: 'Let’s Talk'
-            })
-    .site-footer_bottom
-        .site-footer_cols
-            .site-footer_col
-                .footer-logo
-                ul.footer-links.__with-icons
-                    li.footer-links_item
-                        a(href="").
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipisicing elit.
-                    li.footer-links_item
-                        a(href="#") +62-812-7313-4321
-                    li.footer-links_item
-                        a(href="#") hello.afrian@gmail.com
-            .site-footer_col
-                .site-footer_col-title About US
-                ul.footer-links.__with-icons
-                    li.footer-links_item
-                        a(href="#") About
-                    li.footer-links_item
-                        a(href="#") What We Do
-                    li.footer-links_item
-                        a(href="#") Project
-                    li.footer-links_item
-                        a(href="#") How It Work With Us
-            .site-footer_col
-                .site-footer_col-title Follow US
-                ul.footer-links.__with-icons
-                    li.footer-links_item
-                        a(href="#") Instagram
-                    li.footer-links_item
-                        a(href="#") Facebook
-                    li.footer-links_item
-                        a(href="#") LinkedIn
-                    li.footer-links_item
-                        a(href="#") Youtube
-        .site-footer_copyright
-            span 2019 © Afrianska. All rights reserved.
+mixin site-footer()
+    .site-footer&attributes(attributes)
+        .site-footer_inner.l-wrapper
+            .site-footer_top
+                .site-footer_text-block
+                    .site-footer_text-block-title.
+                        Intersted to woek with our team?
+                    .site-footer_text-block-content.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore 
+                        magna aliqua. Ut enim ad minim veniam.
+                +btn({
+                    tag: 'a',
+                    href: '#',
+                    mod: '',
+                    text: 'Let’s Talk'
+                })
+
+            .site-footer_bottom
+                .site-footer_cols
+                    .site-footer_col
+                        .site-footer_logo
+                            +site-logo().__lighter
+                            b.site-footer_logo-text Afrianska
+                        ul.site-footer_links.__with-icons
+                            li.site-footer_links-item
+                                i a.
+                                a(href="").
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipisicing elit.
+                            li.site-footer_links-item
+                                i t.
+                                a(href="#") +62-812-7313-4321
+                            li.site-footer_links-item
+                                i e
+                                a(href="#") hello.afrian@gmail.com
+                    .site-footer_col
+                        .site-footer_col-title About US
+                        ul.site-footer_links
+                            li.site-footer_links-item
+                                a(href="#") About
+                            li.site-footer_links-item
+                                a(href="#") What We Do
+                            li.site-footer_links-item
+                                a(href="#") Project
+                            li.site-footer_links-item
+                                a(href="#") How It Work With Us
+                    .site-footer_col
+                        .site-footer_col-title Follow US
+                        ul.site-footer_links
+                            li.site-footer_links-item
+                                a(href="#") Instagram
+                            li.site-footer_links-item
+                                a(href="#") Facebook
+                            li.site-footer_links-item
+                                a(href="#") LinkedIn
+                            li.site-footer_links-item
+                                a(href="#") Youtube
+                .site-footer_copyright
+                    span 2019 © Afrianska. All rights reserved.

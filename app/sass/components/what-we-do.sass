@@ -1,13 +1,26 @@
 .what-we-do
-    display: flex
     position: relative
+    padding: 190px 0 210px 0
 
 .what-we-do_title
+    display: block
+    max-width: 360px
     position: absolute
-    top: 0
+    top: 190px
     left: 0
+    font-size: 2.25rem
+    font-weight: 600
+    line-height: 1.28
+    color: #316099
+
+.what-we-do_cols
+    display: flex
 
 .what-we-do_col
+    display: flex
+    flex-direction: column
+    align-items: center
     width: 50%
-    min-height: 200px
-    outline: 1px solid blue
+
+    &:first-child
+        padding-top: 290px

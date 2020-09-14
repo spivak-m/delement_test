@@ -1,5 +1,12 @@
-header.site-header
-    nav.site-header_nav.l-wrapper
-        a(href="#").site-header_logo logo
-        a(href="#").site-header_menu menu
-           
+include ../mixins/site-logo
+
+mixin site-header()
+    header.site-header&attributes(attributes)
+        nav.site-header_nav.l-wrapper
+            a(href="#").site-header_logo
+                +site-logo()
+                //- img(src="img/site-logo.svg", alt="site logo")
+            a(href="#").site-header_menu
+                i.material-icons menu
+
+        block

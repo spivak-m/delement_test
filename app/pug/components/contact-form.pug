@@ -1,16 +1,16 @@
 form.contact-form(action="post")
-    b.contact_title
+    b.contact-form_title SEND US MESSAGE
 
-    .form_tf
-        label Full Name
-        input(type="text" placeholder="Your Name")
+    .contact-form_tf
+        label.contact-form_label Full Name
+        input(type="text" placeholder="Your Name").input
 
-    .form_tf
-        label Email
-        input(type="text" placeholder="Your Email")
+    .contact-form_tf
+        label.contact-form_label Email
+        input(type="text" placeholder="Your Email").input
     
-    .form_tf
-        label Message
-        input(type="text" placeholder="Your Message")
+    .contact-form_tf
+        label.contact-form_label Message
+        textarea(rows="6" placeholder="Your Message").textarea
     
     button(type="submit").btn.__big Submit
